@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 
   <!-- Demo styles -->
   <style>
@@ -42,11 +45,35 @@
     .swiper-pagination-bullet-active{
       color:rgb(10, 207, 214)
     }
-
     
+    .container{
+      max-width:1440px;
+      margin: 0 auto;
+      height: 100%;  /*부모의 높이가 auto가 아니라면 %가 인식된다. */
+      display: flex;
+      align-items: center;
+      justify-content: start;
+    }
+    .fc_white {
+    color: #fff;
+    }
+    .medium {
+        font-weight: 500;
+    }
+    .f64 {
+    font-size: 64px;
+    }
+    .notoS {
+    font-family: 'Noto Serif KR', serif;
+    }
+    .overh {
+    overflow: hidden !important;
+    }
+
    
   </style>
 </head>
+
 
 <body>
   <!-- Swiper -->
@@ -54,16 +81,45 @@
     <div class="swiper" >
           <div class="swiper-wrapper">
                 <div class="swiper-slide  bg0">
-                    <span>광고배너타이틀</span>
+                  <div class="container">
+                      <h2 class="notoS f64 fc_white medium">
+                        <p class="overh">
+                            <span>비염, 천식, 폐질환</span>
+                        </p>
+                        <p class="overh">
+                            <span>편강한의원</span>
+                        </p>
+                      </h2>
+                  </div>                    
                 </div>
                 <div class="swiper-slide  bg1">
-                  <span>광고배너타이틀</span>
+                  <div class="container">
+                    <h2 class="notoS f64 fc_white medium">
+                      <p class="overh">
+                          <span>근본치료에 집중하는</span>
+                      </p>
+                      <p class="overh">
+                          <span>편강 원인 치유법</span>
+                      </p>
+                  </h2>
+                  </div>  
                 </div>
                 <div class="swiper-slide  bg2">
-                  <span>광고배너타이틀</span>
+                  <div class="container">
+                    <h2 class="notoS f64 fc_white medium">
+                      <p class="overh">
+                          <span>편강 의학이</span>
+                      </p>
+                      <p class="overh">
+                          <span>세계로 갑니다</span>
+                      </p>
+                  </h2>
+                  </div>  
                 </div>    
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="container">
+            <div class="swiper-pagination"></div>
+          </div>          
     </div>
   </section>
 
